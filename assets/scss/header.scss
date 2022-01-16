@@ -1,0 +1,32 @@
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    font-size: 2rem;
+    position: sticky;
+    top:0px;
+    left:0px;
+    right:0px;
+    background-color: rgb(35, 35, 138);
+    height:50px;
+    z-index: 3;
+  
+    div{  margin-left: 15px;
+      
+        font-weight: bold;
+    }
+
+    ul{
+        display: flex;
+        text-decoration: none;
+        list-style-type: none;
+        li{
+            margin-right:15px;
+            a{  cursor: pointer;
+                 text-decoration: none;
+                 color: white;
+            }
+        }
+    }
+}

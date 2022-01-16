@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #23238a;
+  height: 50px;
+  z-index: 3; }
+  header div {
+    margin-left: 15px;
+    font-weight: bold; }
+  header ul {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none; }
+    header ul li {
+      margin-right: 15px; }
+      header ul li a {
+        cursor: pointer;
+        text-decoration: none;
+        color: white; }
