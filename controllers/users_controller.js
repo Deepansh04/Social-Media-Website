@@ -10,6 +10,23 @@ module.exports.profile=function(req,res){
     });
    
 }
+module.exports.update=function(req,res){
+      if(req.user.id == req.params.id){
+        //   User.findById(req.params.id,{name : req.body.name,email:req.body.email},function(){})
+        // mtd 2
+          User.findByIdAndUpdate(req.params.id,req.body,function(err,user){
+            //   console.log(req.body);
+              return res.redirect('back');
+          });
+
+      }
+      else{
+          return res.status(401).send('Unauthorized');
+      }
+
+
+
+}
 // render sign up page
 module.exports.signUp = function(req,res){
     if(req.isAuthenticated()){
