@@ -12,7 +12,8 @@ const passportLocal= require('./config/passport-local-strategy');
 
 const MongoStore = require('connect-mongo');
 const { urlencoded } = require('express');
-
+const flash= require('connect-flash');
+const customMware = require('./config/middleware');
 // const sassMiddleware=require('node-sass-middleware');
 // app.use(sassMiddleware({
 //     src:'./assets/scss', // from this folder
@@ -34,6 +35,7 @@ app.set('layout extractScripts',true);
 app.set('view engine','ejs');
 app.set('views','./views');
 // mongo store is used to store the session cookie in db
+
 app.use(session({
     name: 'codial' ,
 //  Todo change the secreate after deployment
@@ -41,11 +43,11 @@ app.use(session({
     saveUninitialized:false,
     resave:false,
     cookie:{
-         maxAge:(1000*60*100) // in milliseconds the time for which its there
+         maxAge:(1000*60*100) // in milliseconds the time for which its there 
    },
    store:  MongoStore.create({
        mongoUrl: 'mongodb://localhost/codeial_development',
-       autoRemove :'disabled'// means it shd not be removed after the time gets over
+       autoRemove :'native'// means it shd not be removed after the time gets over
    },function(err){
        console.log(err || 'connect-mongodb setup' );
    })
@@ -55,6 +57,8 @@ app.use(passport.session()); // create session for cookies
 app.use(passport.setAuthenticatedUser); // call the middleware to store users in locals
 // use express router (middleware)
 // '/' for any url
+app.use(flash());
+app.use(customMware.setFlash);
 app.use('/',require('./routes/index.js'));
 app.listen(port,function(err){
     if(err){

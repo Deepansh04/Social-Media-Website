@@ -3,7 +3,6 @@ const LocalStrategy=require('passport-local').Strategy;
 const User= require('../models/user');
 // authentication using passport
 passport.use(new LocalStrategy({
-
 usernameField:'email' // this email is from frontend data
 },
 function(email,password,done){ // email and password are forntend feild
@@ -53,5 +52,3 @@ passport.setAuthenticatedUser = function(req,res,next){
     return next();
 }
 module.exports=passport;
-
-

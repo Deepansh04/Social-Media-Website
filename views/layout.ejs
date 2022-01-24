@@ -7,20 +7,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title><%= title %></title>
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet"  href="/css/footer.css">
-
     <%-style%>
 </head>
 <body>
    <%- include('_header');%>
+   <!-- <%=console.log(locals)%> -->
+   
+    <!-- <% if(flash.success && flash.success.length>0) {%>
+    <h5>
+        <%=flash.success%>
+    </h5>
+    <%}%> -->
    <main id="layout-main">
   <%- body %>
    </main>
     <%- include('_footer');%>
     <%- script %>
+    <script>
+         <% if(flash.success && flash.success.length>0) { %>
+            new Noty({
+                theme:'relax',// relax theme cone preloded
+                text:"  <%=flash.success%>",
+                type:'success',// color theme
+                layout:'topRight',// location of sucess msg
+                timeout: 1500// in millisec it goes out
+
+
+            }).show();
+
+    
+            
+        <%}%> 
+        <% if(flash.error && flash.error.length>0) { %>
+            new Noty({
+                theme:'relax',// relax theme cone preloded
+                text:"  <%=flash.error%>",
+                type:'error',// color theme
+                layout:'topRight',// location of sucess msg
+                timeout: 1500// in millisec it goes out
+
+
+            }).show();
+
+    
+            
+        <%}%> 
+    
+    </script>
 </body>
 </html>
