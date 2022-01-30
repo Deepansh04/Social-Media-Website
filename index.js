@@ -25,13 +25,16 @@ const customMware = require('./config/middleware');
 
 app.use(express.urlencoded());
 app.use(cookieParser());
-app.use(express.static('./assets'))
+app.use(express.static('./assets'));
+
+// make the upload path available to the browser
+app.use('/uploads',express.static(__dirname+'/uploads'));
+
 app.use(expressLayouts); // by default layout.ejs is naming used for layout
 
 // extract styles and script from subpages into layoutc
 app.set('layout extractStyles',true);
 app.set('layout extractScripts',true);
-
 app.set('view engine','ejs');
 app.set('views','./views');
 // mongo store is used to store the session cookie in db
