@@ -1,0 +1,1 @@
+header{display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:2rem;position:sticky;top:0;left:0;right:0;background-color:#23238a;height:50px;z-index:1}header div{margin-left:15px;font-weight:700}header ul{display:flex;text-decoration:none;list-style-type:none}header ul li{margin-right:15px}header ul li a{cursor:pointer;text-decoration:none;color:#fff}
