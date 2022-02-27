@@ -1,15 +1,21 @@
 <link rel="stylesheet" href="<%= assetPath('css/home.css') %>">
 <link rel="stylesheet" href="<%= assetPath('css/chat_box.css') %>">
 <div id="home-container">
+    <section id="space">
+
+    </section>
     <section id="feed-posts">
-        <h4>Posts</h4>
+        
 
 
         <%if(locals.user){%>
+            <div id="post-form">
+                <div id="welcome-user">Welcome, <%= user.name %>!</div>
             <form action="/posts/create" id="new-post-form" method="POST">
-                <textarea name="content" col="30" rows="3" placeholder="Type Here.." required></textarea>
-                <input type="Submit" value="Post">
+                <textarea id="post-content" name="content" col="30" rows="3" placeholder="Whats on your mind" required></textarea>
+                <button type="submit">Post</button>
             </form>
+        </div>
             <%}%>
                 <div id="posts-list-container">
                     <ul>
