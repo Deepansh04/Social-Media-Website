@@ -9,7 +9,6 @@ module.exports.toggleLike = async function(req, res){
         let likeable;
         let deleted = false;
 
-
         if (req.query.type == 'Post'){
             likeable = await Post.findById(req.query.id).populate('likes');
         }else{
@@ -44,11 +43,10 @@ module.exports.toggleLike = async function(req, res){
             likeable.save();
 
         }
-
         return res.json(200, {
             message: "Request successful!",
             data: {
-                deleted: deleted
+                deleted: deleted,
             }
         })
 

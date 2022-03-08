@@ -1,0 +1,12 @@
+[0mGET /images/default-avatar.jpg [33m404[0m 0.866 ms - 164[0m
+[0mGET /likes/toggle/?id=621b6d948c01976126d0b686&type=Comment [33m404[0m 2.038 ms - 152[0m
+[0mGET /likes/toggle/?id=621b6d948c01976126d0b686&type=Comment [33m404[0m 1.406 ms - 152[0m
+[0mGET /likes/toggle/?id=621b6d948c01976126d0b686&type=Comment [33m404[0m 0.536 ms - 152[0m
+[0mGET /likes/toggle/?id=621b6d948c01976126d0b686&type=Comment [33m404[0m 0.828 ms - 152[0m
+[0mGET /likes/toggle/?id=621b6d948c01976126d0b686&type=Comment [33m404[0m 0.555 ms - 152[0m
+[0mGET /likes/toggle/?id=621b6d948c01976126d0b686&type=Comment [33m404[0m 2.518 ms - 152[0m
+[0mGET /likes/toggle/?id=621b6d948c01976126d0b686&type=Comment [33m404[0m 0.676 ms - 152[0m
+[0mGET /likes/toggle/?id=621cabaef95af1565ee75c42&type=Comment [33m404[0m 0.524 ms - 152[0m
+[0mGET /likes/toggle/?id=621cabaef95af1565ee75c42&type=Comment [33m404[0m 1.131 ms - 152[0m
+[0mGET /favicon.ico [33m404[0m 2.460 ms - 150[0m
+[0mGET /likes/toggle/?id=621cabaef95af1565ee75c42&type=Comment [33m404[0m 1.225 ms - 152[0m

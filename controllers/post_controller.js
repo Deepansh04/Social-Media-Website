@@ -1,5 +1,7 @@
 const Post = require('../models/post');
 const Comment = require('../models/comment');
+const Like = require("../models/like");
+
 
 module.exports.create = async function(req, res){
     try{
@@ -7,6 +9,7 @@ module.exports.create = async function(req, res){
             content: req.body.content,
             user: req.user._id
         });
+        post= await post.populate('user');
        if(req.xhr){
            return res.status(200).json({
                data:{
@@ -15,7 +18,6 @@ module.exports.create = async function(req, res){
                message:"post created !"
            });
        }
-
         req.flash('success', 'Post published!');
         return res.redirect('back');
 

@@ -1,5 +1,7 @@
 const Comment = require('../models/comment');
 const Post = require('../models/post');
+const Like = require("../models/like");
+
 const commentsMailer = require('../mailers/comments_mailer');
 const queue = require('../config/kue');
 const commentEmailWorker = require('../workers/comment_email_worker');
@@ -18,9 +20,11 @@ module.exports.create = async function(req, res){
 
             post.comments.push(comment);
             post.save();
-            
+
+            // comment = await comment.populate('user');
+
             comment = await comment.populate('user', 'name email');
-       
+            // console.log(comment,"555555555555555");
             // commentsMailer.newComment(comment);
             let job = queue.create('emails', comment).save(function(err){
                 if (err){
