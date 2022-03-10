@@ -183,7 +183,41 @@
             text-decoration: none; }
             #home-container #feed-posts #posts-container ul li .post-card .comments-container .posted-comments ul li .comment-like a i {
               color: #00b7ff; }
-  #home-container #user-friends {
-    width: 30%;
-    padding: 10px;
-    border: 1px solid lightgray; }
+  #home-container #all-users {
+    border-left: 1px solid lightgray;
+    padding-left: 1rem; }
+    #home-container #all-users #all-users-header {
+      font-weight: bold;
+      font-size: 1rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+      height: 3rem;
+      line-height: 3rem;
+      width: 210%;
+      margin-left: -.9rem;
+      background-color: #ffa200;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color .2s ease-in-out;
+      color: #1A2238; }
+    #home-container #all-users #all-users-header:hover {
+      background-color: #f19900; }
+    #home-container #all-users .user-list {
+      padding: .5rem;
+      border-bottom: .5px solid lightgray;
+      height: 2rem;
+      text-align: start;
+      line-height: 2rem;
+      cursor: pointer;
+      margin-left: -.5rem;
+      transition: background-color .2s ease-in-out;
+      width: 210%;
+      margin-left: -.9rem; }
+    #home-container #all-users .user-list:hover {
+      background-color: lightgray; }
+    #home-container #all-users a {
+      color: black;
+      text-decoration: none; }
+    #home-container #all-users a:hover {
+      text-decoration: black;
+      text-decoration: underline; }
