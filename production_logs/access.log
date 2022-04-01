@@ -14,3 +14,5 @@
 [0mGET /images/default-avatar.jpg [33m404[0m 1.297 ms - 164[0m
 [0mGET /images/default-avatar.jpg [33m404[0m 1.167 ms - 164[0m
 [0mGET /images/default-avatar.jpg [33m404[0m 2.573 ms - 164[0m
+[0mGET /favicon.ico [33m404[0m 1.202 ms - 150[0m
+[0mGET /favicon.ico [33m404[0m 3.454 ms - 150[0m
