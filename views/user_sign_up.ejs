@@ -1,11 +1,32 @@
-<h1>SIGN UP</h1>
-<form action="/users/create" method="Post">
-    <input type="text"  name="name" placeholder="Your Name" required>
-    <input type="email"  name="email" placeholder="Your Email" required>
-    <input type="password"  name="password" placeholder="Password" required>
-    <input type="password"  name="confirm_password" placeholder="Confirm Password" required>
-    <input type="submit" value="sign UP">
-</form>
-<p>
-    <a href="/users/auth/google">Google Sign In/Sign Up</a>
-</p>
+<!--This is the Sign Up page-->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<link rel="stylesheet" type="text/css" href="/css/signup.css">
+<div id="container-div">
+    <div id="message">
+        <div id="codeial"><h1><i class="fas fa-users"></i>&nbsp;Codial</h1></div>
+       <h2>A new way of staying connected with your friends<br/> and family!</h2>
+    </div>
+
+    <div id="sign-up-form">
+        <form action="/users/create" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <br/><br/>
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <br/><br/>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <br/><br/>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <br/><br/>
+            <button type="submit">Sign Up</button>
+        </form>
+        <h4>OR SIGN UP WITH</h4>
+        <div id="social-login">
+            <a href="/users/auth/google">
+                <div class="social-auth-bar"> <i class="fab fa-google"></i>&nbsp;&nbsp;
+                    Sign Up with Google</div>
+            </a>
+        </div><br/>
+        <a href="/users/sign-in">Already a user? Sign In</a>
+    </div>
+</div>
