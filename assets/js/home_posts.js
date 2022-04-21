@@ -102,8 +102,11 @@
                 </form>
                 <div class="posted-comments" id="posted-comments-${post._id}">
     
-                    <ul type="none">    
-                    </ul>
+                <ul type="none" id="post-comments-${post._id }">`
+                <% for(comment of post.comments) { %>
+                    <%- include('_comment.ejs'); -%>
+                <% } %>
+            `</ul>
                 </div>
                     
             </div>
@@ -143,11 +146,11 @@
                 </form>
                 <div class="posted-comments" id="posted-comments-${post._id}">
     
-                <ul type="none" id="post-comments-${post._id }">
+                <ul type="none" id="post-comments-${post._id }">`
                 <% for(comment of post.comments) { %>
                     <%- include('_comment.ejs'); -%>
                 <% } %>
-            </ul>
+            `</ul>
                 </div>
                     
             </div>
