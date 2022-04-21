@@ -60,7 +60,6 @@
         background-color: white; }
         #home-container #feed-posts #posts-container ul li .post-card .post-card-header {
           display: flex;
-          justify-content: end;
           flex-direction: row;
           flex-wrap: wrap;
           width: 56vw; }
@@ -221,3 +220,25 @@
     #home-container #all-users a:hover {
       text-decoration: black;
       text-decoration: underline; }
+
+@media only screen and (max-width: 600px) {
+  #home-container #all-users {
+    display: none; }
+  #home-container #space {
+    width: 20px; }
+  #home-container #feed-posts {
+    width: 100vw;
+    padding: 0.3rem; }
+    #home-container #feed-posts #post-form {
+      margin-bottom: 2rem;
+      width: 100%; }
+    #home-container #feed-posts #posts-container ul {
+      list-style: none; }
+      #home-container #feed-posts #posts-container ul li .post-card .comments-container form textarea {
+        width: 70.5vw; }
+      #home-container #feed-posts #posts-container ul li .post-card .comments-container form button {
+        width: 20vw; }
+      #home-container #feed-posts #posts-container ul li .post-card .comments-container .posted-comments ul li .comment-card {
+        width: 60vw; }
+        #home-container #feed-posts #posts-container ul li .post-card .comments-container .posted-comments ul li .comment-card .comment-user-name {
+          font-weight: bold; } }

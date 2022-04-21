@@ -1,21 +1,28 @@
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
 <link rel="stylesheet" href="<%= assetPath('css/user_profile.css') %>">
 
-<h1>Codeal / User Profile</h1>
+  <div class="details">
+    <% if(user.avatar) {%>
  <img src="<%= user.avatar%>" alt="<%= user.name%>" width="100">
+ <%}else{%>
+   <!-- <p><i class="fas fa-user"></i></p> -->
+   <img src="/images/default_avatar.png" >
+   <%}%>
+ 
 
-
+ <div><%= profile_user.name%></div>
+</div>
    <% if(user.id == profile_user.id){%>
 <!-- if user mathces then show the form -->
+   <div class = "edit">
+      <div>Edit Profile</div>
    <form action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="post">
         <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
         <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required>
         <input  type="file" name="avatar" placeholder="Profile Picture">
         <input type="submit" value="update">
    </form>
-
-
-   <%}else{%>
-<!-- else show only the profile info  -->
-<p><%= profile_user.name%></p>
-<p><%= profile_user.email%></p>
-  <%}%>
+   <%}%>
+</div>

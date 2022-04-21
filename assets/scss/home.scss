@@ -1,263 +1,300 @@
-#home-container{
+#home-container {
     display: flex;
     flex-direction: row;
-    #space{
-        width:20%;
+
+    #space {
+        width: 20%;
     }
-    #feed-posts{
+
+    #feed-posts {
         width: 60vw;
         height: 100%;
         padding: 1rem;
-        #post-form{
+
+        #post-form {
             margin-bottom: 2rem;
             width: 95%;
-            #welcome-user{
+
+            #welcome-user {
                 text-align: start;
                 font-weight: bold;
                 margin-bottom: 1rem;
             }
+
             border-radius: 0.5rem;
             padding: 1rem;
             height: 160px;
             background-color: white;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-            textarea{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+            textarea {
                 resize: none;
                 height: 4rem;
                 width: 53vw;
                 border-radius: 0.3rem;
                 border: 1px solid lightgrey;
                 padding: 0.5rem;
-               
+
                 margin-bottom: 0.5rem;
             }
-            textarea::placeholder{
-                
+
+            textarea::placeholder {
+
                 font-size: 1rem;
             }
-            textarea:focus{
+
+            textarea:focus {
                 outline: none;
             }
-            button{
+
+            button {
                 margin-left: 50vw;
                 height: 2rem;
                 width: 80px;
                 background-color: #42B72A;
-                color : white;
-                border : none;
+                color: white;
+                border: none;
                 border-radius: 0.3rem;
                 font-size: 1.1rem;
                 cursor: pointer;
                 transition: background-color .2s ease-in-out;
             }
-            button:hover{
+
+            button:hover {
                 background-color: #42aa2d;
             }
         }
-        #posts-container{
-            ul{list-style: none;
-            li{
-                .post-card{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    width: 100%;
-                    margin-left: -2.5rem;
-                    padding: 1rem;
-                    text-align: start;
-                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                    border-radius: 0.5rem;
-                    margin-bottom: 2rem;
-                    background-color: white;
-                    .post-card-header{
+
+        #posts-container {
+            ul {
+                list-style: none;
+
+                li {
+                    .post-card {
                         display: flex;
-                        justify-content: end;
-                        flex-direction: row;
-                        flex-wrap: wrap; 
-                        width: 56vw;
-                        .post-user-profile-pic{
-                            height: 50px;
-                            width: 50px;
-                            border-radius: 50%;
-                            display: block;
-                            object-fit: cover;
-                            text-align: center;
-                        }
-                        .user-name{
-                            font-size: 1.1rem;
-                            font-weight: bold;
-                            margin-bottom: 1.5rem;
-                            margin-left: .5rem;
-                            width: 89%;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        width: 100%;
+                        margin-left: -2.5rem;
+                        padding: 1rem;
+                        text-align: start;
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                        border-radius: 0.5rem;
+                        margin-bottom: 2rem;
+                        background-color: white;
+
+                        .post-card-header {
                             display: flex;
-                            flex-direction: column;
-                            b{
-                                font-size: 0.9rem;
-                                margin-top: 0.5rem;
+                            // justify-content: end;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            width: 56vw;
+
+                            .post-user-profile-pic {
+                                height: 50px;
+                                width: 50px;
+                                border-radius: 50%;
+                                display: block;
+                                object-fit: cover;
+                                text-align: center;
                             }
-                            a{
+
+                            .user-name {
+                                font-size: 1.1rem;
+                                font-weight: bold;
+                                margin-bottom: 1.5rem;
+                                margin-left: .5rem;
+                                width: 89%;
+                                display: flex;
+                                flex-direction: column;
+
+                                b {
+                                    font-size: 0.9rem;
+                                    margin-top: 0.5rem;
+                                }
+
+                                a {
+                                    text-decoration: none;
+                                    transition: text-decoration .2s ease-in-out;
+                                }
+
+                                a:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            a {
+                                color: black
+                            }
+
+                        }
+
+                        .post-content {
+                            min-height: 70px;
+                            font-size: 1.2rem;
+                            white-space: pre-line;
+                            text-align: left;
+                            margin-bottom: 1rem;
+                            margin-left: .5rem;
+                        }
+
+                        .likes-count {
+                            color: rgb(75, 75, 75);
+                            font-size: 0.8rem;
+                            margin-bottom: 0.5rem;
+
+                            padding: 0.5rem;
+                            transition: background-color .2s ease-in-out;
+                            cursor: pointer;
+
+                            a {
+                                color: rgb(75, 75, 75);
                                 text-decoration: none;
-                                transition: text-decoration .2s ease-in-out;
-                            }
-                            a:hover{
-                                text-decoration: underline;
-                            }
-                        }
-                        a{
-                            color : black
-                        }
-                    
-                    }
-                    .post-content{
-                        min-height : 70px;
-                        font-size: 1.2rem;
-                        white-space: pre-line;
-                        text-align: left;
-                        margin-bottom: 1rem;
-                        margin-left: .5rem;
-                    }
-                    
-                    .likes-count{
-                        color: rgb(75, 75, 75);
-                        font-size: 0.8rem;
-                        margin-bottom: 0.5rem;
-                       
-                        padding: 0.5rem;
-                        transition: background-color .2s ease-in-out;
-                        cursor: pointer;
 
-                        a{
-                            color: rgb(75, 75, 75);  
-                            text-decoration : none;
-                            i{
-                                color: rgb(0, 183, 255);
-                            }
-                        }
-                        
-                    }
-                    .comments-container{
-                        form{
-
-                            textarea{
-                                resize: none;
-                                height: 1rem;
-                                width: 54.5vw;
-                                border-radius: 2rem;
-                                border: 1px solid lightgrey;
-                                padding: 0.5rem;
-                                
-                                font-size: 0.8rem;
-                                margin-bottom: 0.5rem;
-                                display: inline;
-                            }
-                            textarea::placeholder{
-                               
-                                font-size: 0.8rem;
-                            }
-                            textarea:focus{
-                                outline: none;
+                                i {
+                                    color: rgb(0, 183, 255);
+                                }
                             }
 
-                                button{
+                        }
+
+                        .comments-container {
+                            form {
+
+                                textarea {
+                                    resize: none;
+                                    height: 1rem;
+                                    width: 54.5vw;
+                                    border-radius: 2rem;
+                                    border: 1px solid lightgrey;
+                                    padding: 0.5rem;
+
+                                    font-size: 0.8rem;
+                                    margin-bottom: 0.5rem;
+                                    display: inline;
+                                }
+
+                                textarea::placeholder {
+
+                                    font-size: 0.8rem;
+                                }
+
+                                textarea:focus {
+                                    outline: none;
+                                }
+
+                                button {
                                     margin-left: 48vw;
                                     height: 2rem;
                                     width: 8vw;
                                     font-size: 0.8rem;
                                     background-color: #42B72A;
-                                    color : white;
+                                    color: white;
                                     font-weight: bold;
-                                    border : none;
+                                    border: none;
                                     border-radius: 0.3rem;
                                     cursor: pointer;
                                     transition: background-color .2s ease-in-out;
                                 }
-                                button:hover{
+
+                                button:hover {
                                     background-color: #42aa2d;
                                 }
-                            
-                        }
-                        .posted-comments{
-                            .comments-header{
-                                font-size: 0.8rem;
+
                             }
-        
-                            ul{
-                                li{
-                                    .comment-user-profile-pic{
-                                        margin-left: -3vw;
-                                        img{
-                                            height: 30px;
-                                            width: 30px;
-                                            border-radius: 50%;
-                                            display: inline-block;
+
+                            .posted-comments {
+                                .comments-header {
+                                    font-size: 0.8rem;
+                                }
+
+                                ul {
+                                    li {
+                                        .comment-user-profile-pic {
+                                            margin-left: -3vw;
+
+                                            img {
+                                                height: 30px;
+                                                width: 30px;
+                                                border-radius: 50%;
+                                                display: inline-block;
+                                            }
                                         }
-                                    }
-                                    .comment-card{
-                                        
-                                        background-color: #F0F2F5;
-                                        border-radius: 1rem;
-                                        margin-left: 0vw;
-                                        margin-top : -35px;
-                                        padding: 1rem;
-                                        padding-top: 0.5rem;
-                                        margin-bottom: 0.5rem;
-                                        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-                                        width: 20vw;
-                                        .comment-user-name{
-                                            font-size: 0.9rem;
-                                            font-weight: bolder;
+
+                                        .comment-card {
+
+                                            background-color: #F0F2F5;
+                                            border-radius: 1rem;
+                                            margin-left: 0vw;
+                                            margin-top: -35px;
+                                            padding: 1rem;
+                                            padding-top: 0.5rem;
                                             margin-bottom: 0.5rem;
-                                            display: flex;
-                                            height:auto;
-                                            flex-direction: row;
-                                            justify-content: space-between;
-                                            a{
-                                                color : black;
+                                            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                                            width: 20vw;
+
+                                            .comment-user-name {
+                                                font-size: 0.9rem;
+                                                font-weight: bolder;
+                                                margin-bottom: 0.5rem;
+                                                display: flex;
+                                                height: auto;
+                                                flex-direction: row;
+                                                justify-content: space-between;
+
+                                                a {
+                                                    color: black;
+                                                    text-decoration: none;
+                                                }
+
+                                                a:hover {
+                                                    text-decoration: underline;
+                                                }
+                                            }
+
+                                            .comment-content {
+                                                margin-left: 0rem;
+                                                font-size: 1rem;
+                                            }
+                                        }
+
+                                        .comment-like {
+                                            color: rgb(75, 75, 75);
+                                            font-size: 0.8rem;
+                                            margin-bottom: 0.5rem;
+
+                                            padding: 0.5rem;
+                                            transition: background-color .2s ease-in-out;
+                                            cursor: pointer;
+
+                                            a {
+                                                color: rgb(75, 75, 75);
                                                 text-decoration: none;
+
+                                                i {
+                                                    color: rgb(0, 183, 255);
+                                                }
                                             }
-                                            a:hover{
-                                                text-decoration: underline;
-                                            }
+
                                         }
-                                        .comment-content{
-                                            margin-left : 0rem;
-                                            font-size: 1rem;
-                                        }
-                                    }
-                                    .comment-like{
-                                       color: rgb(75, 75, 75);
-                                       font-size: 0.8rem;
-                                       margin-bottom: 0.5rem;
-                                      
-                                       padding: 0.5rem;
-                                       transition: background-color .2s ease-in-out;
-                                       cursor: pointer;
-               
-                                       a{
-                                           color: rgb(75, 75, 75);  
-                                           text-decoration : none;
-                                           i{
-                                               color: rgb(0, 183, 255);
-                                           }
-                                       }
-                                        
                                     }
                                 }
                             }
                         }
+
+
                     }
-
-
                 }
-            }
             }
         }
     }
-    
-    
-    #all-users{
+
+
+    #all-users {
         border-left: 1px solid lightgray;
         padding-left: 1rem;
+
         #all-users-header {
             font-weight: bold;
             font-size: 1rem;
@@ -273,6 +310,7 @@
             transition: background-color .2s ease-in-out;
             color: #1A2238;
         }
+
         #all-users-header:hover {
             background-color: #f19900;
         }
@@ -293,14 +331,82 @@
         .user-list:hover {
             background-color: lightgray;
         }
-        a{
-            color : black;
+
+        a {
+            color: black;
             text-decoration: none;
         }
-        a:hover{
+
+        a:hover {
             text-decoration: black;
             text-decoration: underline;
         }
     }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    #home-container {
+        #all-users {
+            display: none;
+        }
+
+        #space {
+            width: 20px;
+        }
+
+        #feed-posts {
+            width: 100vw;
+
+            padding: 0.3rem;
+
+            #post-form {
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+
+            #posts-container {
+                ul {
+                    list-style: none;
+
+                    li {
+                        .post-card {
+                            .comments-container {
+                                form {
+                                    textarea {
+                                        width: 70.5vw;
+                                    }
+                                    button {  
+                                        width: 20vw;
+                                        
+                                    }
     
+                                    
+    
+                                }
+                                .posted-comments {
+                                    ul {
+                                        li {
+
+                                            .comment-card {
+                                                width: 60vw;
+                                                .comment-user-name {
+                                                    font-weight: bold;
+                                                }
+
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
