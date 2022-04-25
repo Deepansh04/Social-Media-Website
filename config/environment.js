@@ -28,7 +28,7 @@ const development ={
     },
     google_client_iD: '211215557254-99egtj920d8vlk2aajga51pdr4a0h2dj.apps.googleusercontent.com', 
        google_client_secret: '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', 
-      google_call_back_url  : "http://localhost:8000/users/auth/google/callback",
+      google_call_back_url  : "https://connect-people-and-learn.herokuapp.com//users/auth/google/callback",
       jwt_secret :'codeial',
       morgan:{
           mode:'dev',

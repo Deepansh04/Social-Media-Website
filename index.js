@@ -22,10 +22,12 @@ const { urlencoded } = require('express');
 const flash= require('connect-flash');
 const customMware = require('./config/middleware');
 
+const chat = process.env.chat_port;
+
 // setup the chat server to be used with socket.io
 const chatServer = require('http').Server(app);
 const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
-chatServer.listen(5000);
+chatServer.listen(chat || 5000);
 console.log('chat server is listening on port 5000');
 const path=require('path');
 // const sassMiddleware=require('node-sass-middleware');
@@ -63,7 +65,7 @@ app.use(session({
          maxAge:(1000*60*100) // in milliseconds the time for which its there 
    },
    store:  MongoStore.create({
-       mongoUrl: 'mongodb://localhost/codeial_development',
+       mongoUrl: 'https://connect-people-and-learn.herokuapp.com/',
        autoRemove :'native'// means it shd not be removed after the time gets over
    },function(err){
        console.log(err || 'connect-mongodb setup' );

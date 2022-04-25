@@ -4,7 +4,7 @@ module.exports.chatSockets = function (socketServer) {
     const server = require('socket.io');
     let io = server(socketServer, {
         cors: {
-            origin: 'https://imptask-manager.herokuapp.com/'
+            origin: 'https://connect-people-and-learn.herokuapp.com/'
         }
     });
     io.sockets.on('connection', function (socket) {
@@ -13,8 +13,6 @@ module.exports.chatSockets = function (socketServer) {
         socket.on('disconnect', function () {
             console.log('socket disconnected!');
         });
-
-
         socket.on('join_room', function (data) {
             console.log('joining request rec.', data);
 
