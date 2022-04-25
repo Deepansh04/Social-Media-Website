@@ -8,6 +8,10 @@
     "prod_start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "v16.13.2",
+    "npm":"8.1.2"
+  },
   "keywords": [
     "social"
   ],

@@ -4,7 +4,7 @@ module.exports.chatSockets = function (socketServer) {
     const server = require('socket.io');
     let io = server(socketServer, {
         cors: {
-            origin: 'http://localhost:8000'
+            origin: 'https://imptask-manager.herokuapp.com/'
         }
     });
     io.sockets.on('connection', function (socket) {
