@@ -28,7 +28,7 @@ const chat = process.env.chat_port;
 const chatServer = require('http').Server(app);
 const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
 chatServer.listen(chat || 5000);
-console.log('chat server is listening on port 5000');
+console.log('chat server is listening on port ',chat);
 const path=require('path');
 // const sassMiddleware=require('node-sass-middleware');
 // app.use(sassMiddleware({
@@ -65,7 +65,7 @@ app.use(session({
          maxAge:(1000*60*100) // in milliseconds the time for which its there 
    },
    store:  MongoStore.create({
-       mongoUrl: 'https://connect-people-and-learn.herokuapp.com/',
+       mongoUrl: process.env.MONGODB_URL,
        autoRemove :'native'// means it shd not be removed after the time gets over
    },function(err){
        console.log(err || 'connect-mongodb setup' );
